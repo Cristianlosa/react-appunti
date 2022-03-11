@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Chat from './shared/Chat';
 import HomeView from './views/HomeView';
+import NotFound from './views/NotFound'
 
 
 const NotFound = () => <div>PAGE NOT FOUND</div>;
