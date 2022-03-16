@@ -1,11 +1,7 @@
 import React, { Component } from 'react'
 
-export default class PageNotFound extends Component {
+export default class NotFound extends Component {
   render() {
-    return (
-      <div>Page not found</div>
-    )
+	  return <div>Page Not Found</div>;
   }
 }
-
-

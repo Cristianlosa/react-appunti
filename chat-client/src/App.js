@@ -1,23 +1,27 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Chat from './shared/Chat';
+import Navbar from './shared/NavBar';
+import ChatView from './views/ChatView';
 import HomeView from './views/HomeView';
-import NotFound from './views/NotFound'
+import WhoView from './views/WhoView';
+import NotFound from "./views/NotFound";
+import Users from './shared/Users';
+import User from "./shared/User";
 
-
-const NotFound = () => <div>PAGE NOT FOUND</div>;
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Routes>
-       <Route path="/" element={<Home />} exact />
-       <Route path="/chat" element={<Chat />} />
-       <Route path="*" element={<NotFound />} exact />
-      </Routes>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomeView />} exact />
+          <Route path="/chat" element={<ChatView />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/user/:id" element={<User />} />
+          <Route path="/who" element={<WhoView />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
       </BrowserRouter>
-
-
     </div>
   );
 }

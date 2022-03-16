@@ -1,12 +1,9 @@
-import NavBar from '../shared/NavBar'
-
+import Login from "../shared/Login";
 
 const HomeView = () => (
-    <div>
-        <NavBar />
-        Home page 
-        </div>
-    
+  <div>
+    <Login/>
+  </div>
 );
 
 export default HomeView
